@@ -1,0 +1,10 @@
+main: me.fps.skypvp.skypvp
+
+version: 1.0
+
+name: SkyPvP
+
+softdepend: [PlaceholderAPI]
+commands:
+  skypvp:
+    description: principal command

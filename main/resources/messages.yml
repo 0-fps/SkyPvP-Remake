@@ -1,0 +1,22 @@
+Messages:
+    deaths:
+      - "&c-------------DEATHS-------------"
+      - "&a-Deaths: &5%deaths%"
+      - "&c--------------------------------"
+    no-have-deaths:
+      - "&c-------------DEATHS-------------"
+      - "&c- You no have deaths"
+      - "&c--------------------------------"
+    kills:
+      - "&c-------------KILLS-------------"
+      - "&a-Kills: &5%kills%"
+      - "&c--------------------------------"
+    no-have-kills:
+      - "&c-------------KILLS-------------"
+      - "&c- You no have kills"
+      - "&c--------------------------------"
+    game-exist: "&cThe skypvp don't exist"
+    teleport-game: "&ateleported to SkyPvP"
+    lobby-exist: "&cThe lobby is not set, please use /lobby"
+    teleport-lobby: "&aTeleported to lobby"
+    permission-denied: "&cYou don't have permission to do this."

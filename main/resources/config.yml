@@ -1,0 +1,30 @@
+Config:
+  #true if you wan't to hunger bar change
+  Hunger-Change: false
+  #true if you wan't to mob spawning
+  Mob-Spawning: false
+  #true if you wan't to player not drops item in dead and hand (with Q by minecraft default)
+  Cancel-Drops: true
+  Death-Message: "%vault_prefix% %killer% &bkilled &a>>  &4%victim%"
+  KillMoney: 100.0
+  KillMoney-Message: "&5You killed %victim% because you win %money%"
+  No-Killer-Death-Message: "%vault_prefix% %victim% has dead alone"
+  Chat-Format-Use: true
+  Chat-Format: "%vault_prefix% (%prestige%) &f%player% &a>> &f%message%"
+  Spawn:
+    world: skypvp
+Scoreboard:
+  use: true
+  title: "&b&lSkyPvP"
+  text:
+    - "&aPlayer: &8%player%"
+    - "&aRank: &8%vault_rank%"
+    - "&m"
+    - "&aPoints: &8%points%"
+    - "&aKills &8%kills%"
+    - "&aDeaths: &8%deaths%"
+    - "&aPrestige: &8%prestige%"
+    - "&aMoney: &8%vault_eco_balance_formatted%"
+    - "&a"
+    - "&amc.ip.net"
+
