@@ -208,6 +208,40 @@ public class PrincipalCommands implements CommandExecutor {
                 }
 
 
+            }else if (args[0].equalsIgnoreCase("stats")){
+                FileConfiguration players = plugin.getPlayers();
+                if (!players.contains("Players.")) {
+                    FileConfiguration messages = plugin.getMessages();
+                    List<String> messagenostats = messages.getStringList("Messages.no-have-stats");
+                    for (int i = 0; i < messagenostats.size(); i++) {
+                        String text = messagenostats.get(i);
+                        jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', text));
+                    }
+                    return true;
+
+                } else {
+                    if (players.contains("Players." + jugador.getUniqueId() + ".kills") && players.contains("Players." + jugador.getUniqueId() + ".deaths")) {
+                        int deaths = Integer.valueOf(players.getString("Players." + jugador.getUniqueId() + ".deaths"));
+                        int kills = Integer.valueOf(players.getString("Players." + jugador.getUniqueId() + ".kills"));
+                        FileConfiguration messages = plugin.getMessages();
+                        List<String> messagestats = messages.getStringList("Messages.stats");
+                        for (int i = 0; i < messagestats.size(); i++) {
+                            String text = messagestats.get(i);
+                            jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', text.replace("%kills%", kills + "").replace("%deaths%", deaths + "")));
+                        }
+                        return true;
+                    } else {
+                    }
+                    FileConfiguration messages = plugin.getMessages();
+                    List<String> messagenostats = messages.getStringList("Messages.no-have-stats");
+                    for (int i = 0; i < messagenostats.size(); i++) {
+                        String text = messagenostats.get(i);
+                        jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', text));
+                    }
+                    return true;
+
+                }
+
             }
             } else {
             jugador.sendMessage(plugin.name + ChatColor.RED + " this command doesn't exist");
