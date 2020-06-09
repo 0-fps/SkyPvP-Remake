@@ -29,7 +29,7 @@ public class skypvp extends JavaPlugin {
     public String version = ChatColor.BLUE+"["+pdffile.getVersion()+ChatColor.BLUE+"]";
     public String name = ChatColor.RED+"["+pdffile.getName()+ChatColor.RED+"]";
 
-    public void onEnable (){
+    public void onEnable(){
 
         Scoreboard scoreboard = new Scoreboard(this);
         scoreboard.initScoreboard();
